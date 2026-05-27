@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <h1>CONTACT</h1>
+        <hr class="line">
+        <h2>Let's connect and create something amazing together.</h2>
+    </header>
+
+    <main>
+        <section class="sec">
+            <div class="git">
+                <h1>GET IN TOUCH</h1>
+            </div>
+
+            <div class="sec0">
+                <i class="fi fi-rr-envelope"></i>
+                <h3>Email <br> bankshotitstudio@gmail.com</h3>
+            </div>
+
+            <div class="sec0">
+                <i class="fi fi-rr-phone-call"></i>
+                <h3>Phone <br> +234 906 134 5825</h3>
+            </div>
+
+            <div class="sec0">
+                <i class="fi fi-rr-marker"></i>
+                <h3>Location <br> Ogun State, Nigeria.</h3>
+            </div>
+
+            <div class="social">
+                <h3>Follow Me</h3>
+                <div class="social1">
+                    <a href="https://www.instagram.com/bankshotit_?igsh=Y3FzMGNpejdtZG0x&utm_source=qr">
+                        <i class="fi fi-brands-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@__thatblackboy_shoots?_r=1&_t=ZS-96KGCsGJq6e">
+                        <i class="fi fi-brands-tik-tok"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <hr class="vertical" />
+
+                <form class="inputs">
+                    <input type="text" name="name" id="name" placeholder="Your Name" />
+                    <input type="email" name="email" id="email" placeholder="Your Email" />
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+
+                    <div class="success-msg" id="successMsg"></div>
+
+                    <button class="submit-btn" onclick="sendMessage(event)">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <img src="./Location.jpeg" alt="">
+        </section>
+    </main>
+
+    <script>
+        async function sendMessage(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill in all fields before sending!');
+                return;
+            }
+
+            const response = await fetch('https://formspree.io/f/mpqnzyaj', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            if (response.ok) {
+                document.getElementById('successMsg').style.display = 'block';
+                document.getElementById('name').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('message').value = '';
+            } else {
+                alert('Something went wrong. Please try again!');
+            }
+        }
+    </script>
+
+</body>
+</html>

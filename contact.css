@@ -1,0 +1,218 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #050814 0%,
+        #0A0F1F 50%,
+        #050814 100%
+    );
+}
+
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    place-items: center;
+    padding: 30px;
+}
+
+.line{
+    width: 100%;
+    max-width: 50px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    margin-top: 10%;
+}
+
+.sec0{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 30px;
+}
+
+.sec0 i{
+    font-size: 40px;
+    color: rgba(133, 38, 133, 0.932);
+}
+
+.git{
+    margin-left: 35px;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 28px;
+}
+
+.social1 {
+    display: flex;
+    flex-direction: row;  /* icons side by side */
+    gap: 20px;
+}
+
+.social1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.container {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  padding: 5px;
+}
+
+.vertical {
+  border: none;
+  border-left: 2px solid white;
+  margin: 0;
+  align-self: stretch;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+}
+
+.inputs input,
+.inputs textarea {
+  background-color: rgba(110, 108, 108, 0.918);
+  border: 1px solid rgba(110, 108, 108, 0.918);
+  border-radius: 10px;
+  padding: 14px;
+  color: #f0e9e9;
+  font-size: 14px;
+  outline: none;
+}
+
+.inputs input::placeholder{
+    color: white;
+}
+
+.inputs textarea {
+  height: 140px;
+  resize: vertical;
+}
+
+textarea::placeholder{
+    color: white;
+}
+
+.inputs button {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 2px 4px 6px;
+
+  transition: all 0.5s ease;
+}
+
+.inputs button:hover {
+  background-color: #9b3fde;
+  transform: scale(1.08) translateY(-5px);
+}
+
+
+img{
+    width: 100%;
+    max-width: 400px;
+    height: 56vh;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+
+@media(max-width: 600px){
+    main{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin: auto;
+
+    }
+
+    .container{
+        margin-top: 10%;
+    }
+
+    img{
+        margin: auto;
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* change from space-between to center */
+        gap: 20px;
+    }
+
+    .sec0, .container {
+        flex-grow: 1;
+        flex-basis: calc(50% - 10px);
+    }
+
+    img {
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+        height: 400px;
+        margin: 20px auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1.5fr; /* give more space to form and map */
+        gap: 20px;
+        align-items: start; /* stops stretching causing empty space */
+        padding: 30px;
+        margin-top: 2%;
+        min-height: auto;
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: 450px;
+        display: block;
+        margin: 0;
+        object-fit: cover;
+
+        
+    }
+}
