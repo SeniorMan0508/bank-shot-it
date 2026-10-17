@@ -3,85 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Concert.css">
-    <title>CONCERT</title>
+    <title>Concerts & Live Events Photography — Bank Shot It</title>
+    <meta name="description" content="View high-energy live stage, music festival, concert, and performance photography by Bank Shot It.">
+    
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="gallery-shared.css">
 </head>
-<body>
-    <header>
-        <div class="port">
-            <h1>PORTFOLIO</h1>
-            <hr>
-            <h2>Sample Gallery Showcasing Some Of Our Recent Concert Photos</h2>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="Portfolio.html">LIFESTYLE</a></li>
-                <li><a href="Wedding.html">WEDDING</a></li>
-                <li><a href="Birthday.html">BIRTHDAY</a></li>
-                <li><a href="Concert.html">CONCERT</a></li>
+<body data-category="concert">
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">&#128247;</div>
+                <div class="brand-text">
+                    <h3>Bank Shot <span>It</span></h3>
+                    <div class="tagline">Creative Concept Studio</div>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="Portfolio.html">Portfolios</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
+
+            <a href="https://wa.me/2349061345825?text=Hello%20Bank%20Shot%20It,%20I%20would%20like%20to%20book%20a%20concert%20coverage!" class="nav-cta" target="_blank">
+                <span>&#128197;</span> Book Session
+            </a>
+
+            <button class="hamburger" id="nav-toggle" aria-label="Open Navigation">☰</button>
+        </div>
     </header>
 
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <button class="mobile-nav-close" id="drawer-close">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Portfolios</a>
+        <a href="Birthday.html">Birthday Gallery</a>
+        <a href="Wedding.html">Wedding Gallery</a>
+        <a href="Concert.html">Concert Gallery</a>
+        <a href="about.html">About Me</a>
+        <a href="services.html">Pricing & Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://wa.me/2349061345825" class="btn-primary" target="_blank" style="margin-top: 15px;">Book On WhatsApp</a>
+    </div>
+
     <main>
-        <section class="portfolio">
-            <div class="image">
-                <img src="./ConcertPic.jpg" alt="">
+        <!-- Gallery Header Banner -->
+        <section class="gallery-hero-banner">
+            <span class="section-eyebrow">Raw Energy & Stage Lights</span>
+            <h1 class="gallery-banner-title">Concerts & Live Events</h1>
+            <hr class="section-divider">
+            <p class="gallery-banner-sub">
+                Electrifying crowd atmospheres, artist spotlights, and unforgettable festival nights.
+            </p>
+            <div class="port-meta">
+                <span class="badge-count" id="category-count-badge">13 Photos</span>
+                <span>• Shot by Bank Shot It</span>
             </div>
-
-            <div class="image">
-                <img src="./ConcertPic1.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic2.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic3.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic4.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic5.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic6.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic7.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic8.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic9.jpg" alt="">
-            </div>
-
-            
-            <div class="image">
-                <img src="./ConcertPic10.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic11.jpg" alt="">
-            </div>
-
-            <div class="image">
-                <img src="./ConcertPic12.jpg" alt="">
-            </div>
-
         </section>
+
+        <!-- Category Filter Tabs Navigation -->
+        <div class="gallery-nav-container">
+            <ul class="gallery-nav-bar">
+                <li><a href="Portfolio.html">&#127807; Lifestyle</a></li>
+                <li><a href="Birthday.html">&#127874; Birthday</a></li>
+                <li><a href="Wedding.html">&#128141; Wedding</a></li>
+                <li class="active"><a href="Concert.html">&#127928; Concert</a></li>
+            </ul>
+        </div>
+
+        <!-- Dynamic Photo Grid Container -->
+        <section class="gallery-section">
+            <div class="portfolio dynamic-gallery-grid" id="gallery-grid">
+                <!-- Static Fallback Images (Updated to image/ directory) -->
+                <div class="image"><img src="./image/ConcertPic.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic1.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic2.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic3.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic4.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic5.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic6.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic7.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic8.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic9.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic10.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic11.jpg" alt="Concert Shoot"></div>
+                <div class="image"><img src="./image/ConcertPic12.jpg" alt="Concert Shoot"></div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Bank Shot <span>It</span></h3>
+                    <p>High-end photography capturing stories, preserving raw emotions, and celebrating life's most unforgettable chapters.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/bankshotit_?igsh=Y3FzMGNpejdtZG0x&utm_source=qr" target="_blank" class="social-btn"><i class="fi fi-brands-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@__thatblackboy_shoots?_r=1&_t=ZS-96KGCsGJq6e" target="_blank" class="social-btn"><i class="fi fi-brands-tik-tok"></i></a>
+                        <a href="https://wa.me/2349061345825" target="_blank" class="social-btn"><i class="fi fi-rr-phone-call"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Galleries</h4>
+                    <ul class="footer-links">
+                        <li><a href="Birthday.html">Birthday Shoots</a></li>
+                        <li><a href="Wedding.html">Wedding Ceremonies</a></li>
+                        <li><a href="Concert.html">Concerts & Events</a></li>
+                        <li><a href="Portfolio.html">Lifestyle & Fashion</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Faruq</a></li>
+                        <li><a href="services.html">Packages & Pricing</a></li>
+                        <li><a href="contact.html">Contact & Location</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Studio Location</h4>
+                    <p style="margin-bottom: 8px; font-size: 13px;">Ogun State, Nigeria</p>
+                    <p style="margin-bottom: 8px; font-size: 13px;">Available worldwide for destination bookings.</p>
+                    <p style="font-size: 13px; color: var(--gold);">&#9742; +234 906 134 5825</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Bank Shot It (ShotByBankyCreativesConcept). All Rights Reserved.</div>
+                <div>Crafted for timeless visual excellence.</div>
+            </div>
+        </footer>
     </main>
-    
+
+    <!-- Mobile Nav Toggle Script -->
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const drawerClose = document.getElementById('drawer-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+
+        if (navToggle && mobileDrawer) {
+            navToggle.addEventListener('click', () => mobileDrawer.classList.add('active'));
+            drawerClose.addEventListener('click', () => mobileDrawer.classList.remove('active'));
+            mobileDrawer.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileDrawer.classList.remove('active'));
+            });
+        }
+    </script>
+
+    <!-- Dynamic Gallery Store & Lightbox -->
+    <script src="gallery-store.js"></script>
+    <script src="gallery-loader.js"></script>
 </body>
 </html>

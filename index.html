@@ -3,99 +3,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Shot It — Fine Art & Editorial Photography Studio</title>
+    <meta name="description" content="Premier photography studio in Ogun State & Lagos, Nigeria specializing in weddings, birthdays, concerts, lifestyle, and editorial portraits by Faruq (Bank Shot It).">
+    
+    <!-- Icons & Typography -->
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Bank Shot It</title>
+    <link rel="stylesheet" href="gallery-shared.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="bank">
-                <h3>Bank Shot It</h3>
-                <h5 class="pho">Photographer</h5>
-            </div>
+<body data-category="home">
 
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+    <!-- ======================================================================
+         Header & Navigation Bar
+         ====================================================================== -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">&#128247;</div>
+                <div class="brand-text">
+                    <h3>Bank Shot <span>It</span></h3>
+                    <div class="tagline">Creative Concept Studio</div>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="Portfolio.html">Portfolios</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
 
-        <div class="container">
-            <div>
-                <h1>CAPTURING MOMENTS, <br> CREATING MEMORIES</h1>
-            </div>
+            <a href="https://wa.me/2349061345825?text=Hello%20Bank%20Shot%20It,%20I%20would%20like%20to%20book%20a%20photography%20session!" class="nav-cta" target="_blank">
+                <span>&#128197;</span> Book Session
+            </a>
 
-            <div>
-                <hr>
-            </div>
-
-            <div class="sub-text">
-                I'm a passionate Photographer based in <br>
-                OGUN STATE, specializing in landscapes, <br> 
-                portraits and candid moments.
-            </div>
-            <div>
-                <a href="portfolio.html">
-                    <button class="btn">VIEW PORTFOLIO</button>
-                </a>
-            </div>
+            <button class="hamburger" id="nav-toggle" aria-label="Open Navigation">☰</button>
         </div>
     </header>
 
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <button class="mobile-nav-close" id="drawer-close">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Portfolios</a>
+        <a href="Birthday.html">Birthday Gallery</a>
+        <a href="Wedding.html">Wedding Gallery</a>
+        <a href="Concert.html">Concert Gallery</a>
+        <a href="about.html">About Me</a>
+        <a href="services.html">Pricing & Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://wa.me/2349061345825?text=Hello%20Bank%20Shot%20It,%20I%20would%20like%20to%20book%20a%20session!" class="btn-primary" target="_blank" style="margin-top: 15px;">Book On WhatsApp</a>
+    </div>
+
     <main>
-        <section class="about">
-            <div>
-                <h2>ABOUT ME</h2>
-            </div>
+        <!-- ==================================================================
+             Hero Section
+             ================================================================== -->
+        <section class="hero-section">
+            <div class="hero-overlay-glow"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-pill">
+                        <span>&#11088;</span> Ogun State & Lagos, Nigeria
+                    </div>
+                    <h1 class="hero-title">
+                        Capturing Moments, <br>
+                        <span>Creating Memories.</span>
+                    </h1>
+                    <p class="hero-subtext">
+                        Passionate visual storyteller specializing in vibrant lifestyle shoots, intimate wedding ceremonies, high-energy live concerts, and authentic portraits that freeze emotion forever.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="Portfolio.html" class="btn-primary">
+                            <span>&#128248;</span> Explore Portfolios
+                        </a>
+                        <a href="https://wa.me/2349061345825?text=Hello,%20I%20want%20to%20book%20a%20photoshoot%20with%20Bank%20Shot%20It" target="_blank" class="btn-outline">
+                            Book A Session &rarr;
+                        </a>
+                    </div>
 
-            <div>
-                <hr class="line">
-            </div>
-
-            <div>
-                <h1>STORIES THROUGH MY SHOT</h1>
-            </div>
-
-            <div>
-                <h2 class="about1">Photography is more than just pictures to me <span>-</span> it's about stories, <br>
-                    capturing emotions, and freezing moment that last forever. <br> I focus on natural light, real moment, and authentic connections.
-               </h2>
+                    <div class="hero-stats-row">
+                        <div class="stat-item">
+                            <h4>5+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>200+</h4>
+                            <p>Shoots Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>100+</h4>
+                            <p>Delighted Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>100%</h4>
+                            <p>Natural Light Focus</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="pic">
-            <h2>PORTFOLIO</h2>
-            <section class="pic1">
-                <div class="faq1">
-                    <img src="./Faruq1.jpg" alt="">
-                </div>
+        <!-- ==================================================================
+             Category Explorer (Direct Links to Specific Galleries)
+             ================================================================== -->
+        <section class="section-padding">
+            <div class="section-header">
+                <span class="section-eyebrow">Featured Collections</span>
+                <h2 class="section-title">Explore Portfolios By Category</h2>
+                <hr class="section-divider">
+                <p class="section-subtitle">
+                    Dive into our specialized galleries tailored for every life milestone.
+                </p>
+            </div>
 
-                <div class="faq1">
-                    <img src="./Faruq2.jpg" alt="">
-                </div>
+            <div class="category-showcase-grid">
+                <!-- 1. Birthday -->
+                <a href="Birthday.html" class="category-card">
+                    <img src="./image/BirthdayPic.jpg" alt="Birthday Photography" class="category-card-bg" loading="lazy">
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <div class="category-card-tag">&#127874; Category</div>
+                        <h3 class="category-card-title">Birthday Celebrations</h3>
+                        <span class="category-card-link">View Birthday Gallery &rarr;</span>
+                    </div>
+                </a>
 
-                <div class="faq1">
-                    <img src="./Faruq3.jpg" alt="">
-                </div>
+                <!-- 2. Wedding -->
+                <a href="Wedding.html" class="category-card">
+                    <img src="./image/WeddingPic.jpg" alt="Wedding Photography" class="category-card-bg" loading="lazy">
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <div class="category-card-tag">&#128141; Category</div>
+                        <h3 class="category-card-title">Weddings & Romance</h3>
+                        <span class="category-card-link">View Wedding Gallery &rarr;</span>
+                    </div>
+                </a>
 
-                <div class="faq1">
-                    <img src="./Faruq4.jpg" alt="">
-                </div>
-            </section>
+                <!-- 3. Concert -->
+                <a href="Concert.html" class="category-card">
+                    <img src="./image/ConcertPic.jpg" alt="Concert Photography" class="category-card-bg" loading="lazy">
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <div class="category-card-tag">&#127928; Category</div>
+                        <h3 class="category-card-title">Concerts & Live Events</h3>
+                        <span class="category-card-link">View Concert Gallery &rarr;</span>
+                    </div>
+                </a>
+
+                <!-- 4. Lifestyle -->
+                <a href="Portfolio.html" class="category-card">
+                    <img src="./image/Lifestyle.jpg" alt="Lifestyle Photography" class="category-card-bg" loading="lazy">
+                    <div class="category-card-overlay"></div>
+                    <div class="category-card-content">
+                        <div class="category-card-tag">&#127807; Category</div>
+                        <h3 class="category-card-title">Lifestyle & Urban</h3>
+                        <span class="category-card-link">View Lifestyle Gallery &rarr;</span>
+                    </div>
+                </a>
+            </div>
         </section>
 
-        <footer>
-            <div class="socials">
-                <a href="https://www.tiktok.com/@__thatblackboy_shoots?_r=1&_t=ZS-96KGCsGJq6e"><i class="fi fi-brands-tik-tok">TikTok</i></a>
-                <a href="https://www.instagram.com/bankshotit_?igsh=Y3FzMGNpejdtZG0x&utm_source=qr"><i class="fi fi-brands-instagram"> Instagram</i></a>
+        <!-- ==================================================================
+             About Me Teaser
+             ================================================================== -->
+        <section class="section-padding about-teaser">
+            <div class="about-teaser-container">
+                <div class="about-image-wrapper">
+                    <div class="about-image-frame">
+                        <img src="./image/faruq-About-Pic.png" alt="Faruq - Bank Shot It Lead Photographer" loading="lazy">
+                    </div>
+                    <div class="about-floating-badge">
+                        <h4>Faruq Banky</h4>
+                        <p>Lead Artist & Founder</p>
+                    </div>
+                </div>
+
+                <div class="about-text-content">
+                    <span class="section-eyebrow">Behind The Lens</span>
+                    <h2>Stories Told Through Light, Shadow & Soul</h2>
+                    <p>
+                        Photography is never just pictures to me — it's about freezing raw emotions, preserving heritage, and unveiling timeless connections that words fail to express.
+                    </p>
+                    <p>
+                        Based in Ogun State and available across Nigeria, I focus on natural ambient lighting, candid emotions, and making you feel totally comfortable and empowered in front of the lens.
+                    </p>
+
+                    <ul class="about-feature-list">
+                        <li><span>&#10003;</span> Tailored posing guidance that looks natural & effortless</li>
+                        <li><span>&#10003;</span> Master-level color grading and cinematic tonal retouching</li>
+                        <li><span>&#10003;</span> Ultra-fast online gallery delivery with print-ready high-res files</li>
+                    </ul>
+
+                    <a href="about.html" class="btn-primary">
+                        Read My Full Story &rarr;
+                    </a>
+                </div>
             </div>
-            
+        </section>
+
+        <!-- ==================================================================
+             Dynamic Portfolio Highlights
+             ================================================================== -->
+        <section class="section-padding" id="portfolio">
+            <div class="section-header">
+                <span class="section-eyebrow">Curated Showcase</span>
+                <h2 class="section-title">Portfolio Highlights</h2>
+                <hr class="section-divider">
+                <p class="section-subtitle">
+                    A taste of our recent masterworks. Click any photo to inspect in full-screen Lightbox.
+                </p>
+            </div>
+
+            <div class="home-gallery-container">
+                <section class="pic1">
+                    <div class="faq1">
+                        <img src="./image/Faruq1.jpg" alt="Bank Shot Shoot 1">
+                    </div>
+                    <div class="faq1">
+                        <img src="./image/Faruq2.jpg" alt="Bank Shot Shoot 2">
+                    </div>
+                    <div class="faq1">
+                        <img src="./image/Faruq3.jpg" alt="Bank Shot Shoot 3">
+                    </div>
+                    <div class="faq1">
+                        <img src="./image/Faruq4.jpg" alt="Bank Shot Shoot 4">
+                    </div>
+                </section>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="Portfolio.html" class="btn-primary">
+                        <span>&#128248;</span> View All Portfolios (50+ Photos)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             Packages Preview
+             ================================================================== -->
+        <section class="section-padding" style="background: rgba(10, 15, 36, 0.4); border-top: 1px solid var(--border-glass);">
+            <div class="section-header">
+                <span class="section-eyebrow">Investment & Packages</span>
+                <h2 class="section-title">Transparent Shoot Pricing</h2>
+                <hr class="section-divider">
+                <p class="section-subtitle">
+                    Clear packages designed for birthdays, portraits, engagements, and brands.
+                </p>
+            </div>
+
+            <div class="packages-grid">
+                <!-- Basic -->
+                <div class="package-card">
+                    <div>
+                        <h3 class="package-name">BASIC SESSION</h3>
+                        <div class="package-price">&#8358;25,000</div>
+                        <ul class="package-features">
+                            <li>1 Hour Studio or Location Session</li>
+                            <li>3 Master Retouched High-Res Photos</li>
+                            <li>1 Outfit Change</li>
+                            <li>Private Digital Download Link</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/2349061345825?text=Hello%20Bank%20Shot%20It,%20I%20am%20interested%20in%20booking%20the%20Basic%20Session%20(25k)" target="_blank" class="btn-outline" style="text-align:center;">
+                        Book Basic
+                    </a>
+                </div>
+
+                <!-- Standard (Popular) -->
+                <div class="package-card popular">
+                    <span class="popular-badge">&#11088; Most Popular</span>
+                    <div>
+                        <h3 class="package-name">STANDARD SESSION</h3>
+                        <div class="package-price">&#8358;45,000</div>
+                        <ul class="package-features">
+                            <li>2 - 3 Hours Dedicated Session</li>
+                            <li>6 Master Retouched High-Res Photos</li>
+                            <li>Up to 2 Outfit Changes</li>
+                            <li>1 Short Cinematic Video Clip / Reel</li>
+                            <li>Express Digital Delivery</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/2349061345825?text=Hello%20Bank%20Shot%20It,%20I%20am%20interested%20in%20booking%20the%20Standard%20Session%20(45k)" target="_blank" class="btn-primary" style="text-align:center; justify-content:center;">
+                        Book Standard
+                    </a>
+                </div>
+
+                <!-- Premium -->
+                <div class="package-card">
+                    <div>
+                        <h3 class="package-name">PREMIUM FULL-DAY</h3>
+                        <div class="package-price">&#8358;100,000</div>
+                        <ul class="package-features">
+                            <li>Full Day Comprehensive Coverage</li>
+                            <li>15 Master Retouched High-Res Photos</li>
+                            <li>Unlimited Outfit Changes</li>
+                            <li>Full Cinematic Video + BTS Footage</li>
+                            <li>Online Cloud Gallery + Priority Turnaround</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/2349061345825?text=Hello%20Bank%20Shot%20It,%20I%20am%20interested%20in%20booking%20the%20Premium%20Session%20(100k)" target="_blank" class="btn-outline" style="text-align:center;">
+                        Book Premium
+                    </a>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="services.html" style="color: var(--gold); font-size: 14px; font-weight: 600; letter-spacing: 1px;">
+                    View Extra Services & Custom Add-ons &rarr;
+                </a>
+            </div>
+        </section>
+
+        <!-- ==================================================================
+             Footer
+             ================================================================== -->
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Bank Shot <span>It</span></h3>
+                    <p>
+                        High-end photography capturing stories, preserving raw emotions, and celebrating life's most unforgettable chapters.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/bankshotit_?igsh=Y3FzMGNpejdtZG0x&utm_source=qr" target="_blank" class="social-btn" aria-label="Instagram">
+                            <i class="fi fi-brands-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@__thatblackboy_shoots?_r=1&_t=ZS-96KGCsGJq6e" target="_blank" class="social-btn" aria-label="TikTok">
+                            <i class="fi fi-brands-tik-tok"></i>
+                        </a>
+                        <a href="https://wa.me/2349061345825" target="_blank" class="social-btn" aria-label="WhatsApp">
+                            <i class="fi fi-rr-phone-call"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Galleries</h4>
+                    <ul class="footer-links">
+                        <li><a href="Birthday.html">Birthday Shoots</a></li>
+                        <li><a href="Wedding.html">Wedding Ceremonies</a></li>
+                        <li><a href="Concert.html">Concerts & Events</a></li>
+                        <li><a href="Portfolio.html">Lifestyle & Fashion</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Faruq</a></li>
+                        <li><a href="services.html">Packages & Pricing</a></li>
+                        <li><a href="contact.html">Contact & Location</a></li>
+                        <li><a href="https://wa.me/2349061345825" target="_blank">Book On WhatsApp</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Studio Location</h4>
+                    <p style="margin-bottom: 8px; font-size: 13px;">Ogun State, Nigeria</p>
+                    <p style="margin-bottom: 8px; font-size: 13px;">Available worldwide for destination bookings.</p>
+                    <p style="font-size: 13px; color: var(--gold);">&#9742; +234 906 134 5825</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Bank Shot It (ShotByBankyCreativesConcept). All Rights Reserved.</div>
+                <div>Crafted for timeless visual excellence.</div>
+            </div>
         </footer>
     </main>
+
+    <!-- Mobile Navigation Drawer Controller -->
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const drawerClose = document.getElementById('drawer-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+
+        if (navToggle && mobileDrawer) {
+            navToggle.addEventListener('click', () => mobileDrawer.classList.add('active'));
+            drawerClose.addEventListener('click', () => mobileDrawer.classList.remove('active'));
+            mobileDrawer.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileDrawer.classList.remove('active'));
+            });
+        }
+    </script>
+
+    <!-- Dynamic Gallery Store & Lightbox -->
+    <script src="gallery-store.js"></script>
+    <script src="gallery-loader.js"></script>
 </body>
 </html>

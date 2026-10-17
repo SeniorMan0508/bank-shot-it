@@ -1,126 +1,80 @@
-*, *::before, *::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ==========================================================================
+   Bank Shot It - Portfolio & Gallery Showcase Styles
+   Editorial Gallery Experience with Lightbox & Category Navigation
+   ========================================================================== */
+
+@import url('style.css');
+
+.gallery-hero-banner {
+    position: relative;
+    padding: 80px 20px 40px 20px;
+    text-align: center;
+    background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.14) 0%, transparent 70%);
 }
 
-body {
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
+.gallery-banner-title {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
     color: #ffffff;
-    background: linear-gradient(
-        135deg,
-        #050814 0%,
-        #0A0F1F 50%,
-        #050814 100%
-    );
+    margin-bottom: 12px;
 }
 
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    z-index: 100;
-    background: #050814;
+.gallery-banner-sub {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 650px;
+    margin: 0 auto 20px auto;
 }
 
-.port {
+/* Category Filter Tabs Bar */
+.gallery-nav-container {
+    max-width: 1320px;
+    margin: 0 auto 30px auto;
+    padding: 0 20px;
     display: flex;
-    flex-direction: column;
-    place-items: center;
-    gap: 20px;
+    justify-content: center;
 }
 
-hr {
-    width: 100%;
-    max-width: 50px;
-}
-
-nav ul {
+.gallery-nav-bar {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 12px;
     list-style: none;
-    margin-top: 30px;
-}
-
-li a {
-    color: white;
-    text-decoration: none;
-}
-
-li {
-    padding: 6px 16px;
-    text-align: center;
-    transition: all 0.5s ease;
-}
-
-li:hover {
-    outline: 2px solid white;
-    border-radius: 10px;
-    transform: scale(1.08) translateY(-5px);
-}
-
-.portfolio{
-    display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 10px auto 0;
-    max-width: 1200px;
-    margin-top: 250px;
+    background: rgba(13, 20, 42, 0.65);
+    border: 1px solid var(--border-glass);
+    padding: 8px 14px;
+    border-radius: 40px;
+    backdrop-filter: var(--glass-blur);
 }
 
-.image img{
-    flex-grow: 1;
-    flex-basis: 200px;
-    width: 100%;
-    max-width: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-    display: block;
-    margin: auto;
+.gallery-nav-bar li a {
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: var(--transition);
+    display: inline-block;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-    header {
-        padding: 15px;
-    }
-
-    nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        margin-top: 10px;
-    }
-
-    li {
-        font-size: 15px;
-        padding: 4px 8px;
-    }
+.gallery-nav-bar li a:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
 }
 
-/* Mobile Landscape */
-@media (max-height: 500px) and (orientation: landscape) {
-    header {
-        padding: 10px;
-    }
+.gallery-nav-bar li.active a {
+    color: #050814 !important;
+    background: var(--gold-gradient) !important;
+    font-weight: 700;
+    box-shadow: 0 4px 15px var(--gold-glow);
+}
 
-    nav ul {
-        gap: 10px;
-        flex-wrap: wrap;
-        margin-top: 5px;
-    }
-
-    li {
-        font-size: 13px;
-        padding: 3px 6px;
-    }
-
-    .portfolio {
-        margin-top: 150px;
-    }
+/* Gallery Section */
+.gallery-section {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 10px 20px 80px 20px;
 }

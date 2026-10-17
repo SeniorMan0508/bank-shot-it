@@ -1,190 +1,206 @@
-*, *::before, *::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ==========================================================================
+   Bank Shot It - About Page Styles
+   Editorial Luxury Bio & Artistic Philosophy
+   ========================================================================== */
+
+@import url('style.css');
+
+.about-hero-banner {
+    position: relative;
+    padding: 100px 20px 60px 20px;
+    text-align: center;
+    background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
+.about-banner-title {
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
     color: #ffffff;
-
-    background: linear-gradient(
-        135deg,
-        #050814 0%,
-        #0A0F1F 50%,
-        #050814 100%
-    );
+    margin-bottom: 12px;
 }
 
-header{
-    padding: 20px;
-    text-align: center;
-    font-size: 25px;
+.about-banner-sub {
+    font-size: 16px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-hr{
-    width: 100%;
-    max-width: 90px;
-    margin: auto;
-    margin-top: 20px;
-}
-
-
-
-section{
-    display: flex;
-    gap: 5rem;
-}
-
-img{
-    width: 100%;
-    max-width: 450px;
-    height: 100vh;
-    max-height: 600px;
-    padding: 20px;
-    margin-left: 5%;
-}
-
-.story{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 75px;
-    margin-top: 5%;
-}
-
-.logo{
+.about-story-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.about-portrait-card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #02040A;
+    border: 1px solid var(--border-gold);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px var(--gold-glow);
+}
+
+.about-portrait-card img {
     width: 100%;
-    max-width: 800px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.logo1{
-    border: 1px solid black;
-    box-shadow: 2px 4px 6px;
-    font-size: 2rem;
+.about-badge-ribbon {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--gold-gradient);
+    color: #050814;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.logo2{
-    display: flex;
-    gap: 30px;
+.about-bio-text h2 {
+    font-size: clamp(2rem, 3.2vw, 2.6rem);
+    margin-bottom: 20px;
+    color: #ffffff;
+    line-height: 1.25;
 }
 
-i{
-    font-size: 30px;
-    color: rgba(133, 38, 133, 0.932);
+.about-bio-text p {
+    color: var(--text-secondary);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-.logo3, .logo4, .logo5{
-    margin-left: 20px;
-    text-align: center;
+/* Stats Counter Row */
+.about-stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1280px;
+    margin: 60px auto;
 }
 
-.logo5{
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.767);
-    margin-left: 3rem;
-}
-
-.logo4{
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.767);
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-    section {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    img {
-        max-width: 400px;
-        margin-left: 0;
-    }
-
-    .story {
-        text-align: center;
-    }
-
-    .logo {
-        grid-template-columns: 1fr;
-        margin: auto;
-        max-width: 350px;
-    }
-
-    .logo3, .logo4{
-        margin: 0 auto;
-    }
-
-    .logo3{
-        margin-left: 90px;
-    }
-}
-
-/* Tablet small - THE MISSING ONE */
-@media (min-width: 601px) and (max-width: 768px) {
-    section {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    img {
-        max-width: 100%;
-        margin-left: 0;
-    }
-
-    .story {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .logo {
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: auto;
-    }
-}
-
-/* Tablet large */
-@media (min-width: 769px) and (max-width: 1024px) {
-    section {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-
-    img {
-        max-width: 100%;
-        margin-left: 0;
-    }
-
-    .story {
-        text-align: center;
-        padding: 20px;
-    }
-}
-
-@media (min-width: 1200px){
-    section{
-        gap: 2rem;
-    }
-}
-
-footer{
-    background-color: #0A0F1F;
-    text-align: center;
+.about-stat-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-md);
     padding: 30px;
-    font-size: 15px;
+    text-align: center;
+    transition: var(--transition);
 }
 
-@media (max-width: 600px){
-    footer{
-        font-size: 8px;
+.about-stat-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-gold);
+    box-shadow: var(--shadow-gold);
+}
+
+.stat-icon {
+    font-size: 30px;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 8px;
+    font-family: 'Cinzel', serif;
+}
+
+.stat-title {
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+/* Creative Philosophy Pillars */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1280px;
+    margin: 40px auto 0 auto;
+}
+
+.pillar-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: 35px 25px;
+    transition: var(--transition);
+}
+
+.pillar-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--border-gold);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.pillar-number {
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--gold);
+    opacity: 0.8;
+    margin-bottom: 15px;
+    font-family: 'Cinzel', serif;
+}
+
+.pillar-card h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.pillar-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Quote Callout */
+.quote-banner {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(10, 15, 36, 0.8) 100%);
+    border: 1px solid var(--border-gold);
+    border-radius: var(--radius-lg);
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 80px auto;
+    text-align: center;
+    position: relative;
+}
+
+.quote-banner blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+    font-style: italic;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.quote-author {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    .about-story-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }

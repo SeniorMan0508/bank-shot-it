@@ -3,76 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <title>About Faruq — Bank Shot It Photography</title>
+    <meta name="description" content="Meet Faruq, the creative eye behind Bank Shot It. Discover the story, passion, and artistic philosophy powering our editorial photography studio.">
+    
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
     <link rel="stylesheet" href="about.css">
-    <title>About</title>
+    <link rel="stylesheet" href="gallery-shared.css">
 </head>
 <body>
-    <header>
-        <div>
-            <h1>ABOUT ME</h1>
-            <hr>
-            <marquee direction="left" scrollamount="3">
-               <h3>ShotByBankyCreativesConcept</h3> 
-            </marquee>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <div class="brand-icon">&#128247;</div>
+                <div class="brand-text">
+                    <h3>Bank Shot <span>It</span></h3>
+                    <div class="tagline">Creative Concept Studio</div>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Portfolio.html">Portfolios</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <a href="https://wa.me/2349061345825?text=Hello%20Bank%20Shot%20It,%20I%20would%20like%20to%20book%20a%20photography%20session!" class="nav-cta" target="_blank">
+                <span>&#128197;</span> Book Session
+            </a>
+
+            <button class="hamburger" id="nav-toggle" aria-label="Open Navigation">☰</button>
         </div>
     </header>
 
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+        <button class="mobile-nav-close" id="drawer-close">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="Portfolio.html">Portfolios</a>
+        <a href="Birthday.html">Birthday Gallery</a>
+        <a href="Wedding.html">Wedding Gallery</a>
+        <a href="Concert.html">Concert Gallery</a>
+        <a href="about.html">About Me</a>
+        <a href="services.html">Pricing & Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://wa.me/2349061345825" class="btn-primary" target="_blank" style="margin-top: 15px;">Book On WhatsApp</a>
+    </div>
+
     <main>
-        <section>
-            <div>
-                <img src="./faruq-About-Pic.png" alt="">
+        <!-- Banner -->
+        <section class="about-hero-banner">
+            <span class="section-eyebrow">The Creator's Journey</span>
+            <h1 class="about-banner-title">About Bank Shot It</h1>
+            <hr class="section-divider">
+            <p class="about-banner-sub">
+                Transforming brief moments into timeless masterpieces of light, emotion, and authenticity.
+            </p>
+        </section>
+
+        <!-- Bio Section -->
+        <section class="section-padding" style="padding-top: 20px;">
+            <div class="about-story-grid">
+                <div class="about-portrait-card">
+                    <img src="./image/faruq-About-Pic.png" alt="Faruq Banky">
+                    <div class="about-badge-ribbon">&#128248; Faruq Banky</div>
+                </div>
+
+                <div class="about-bio-text">
+                    <span class="section-eyebrow">Lead Visual Storyteller</span>
+                    <h2>"Photography is how we touch, feel, and love forever."</h2>
+                    <p>
+                        Hello, I'm <strong>Faruq</strong> — the creative founder and lead eye behind <strong>Bank Shot It</strong> (ShotByBankyCreativesConcept). Based in Ogun State and working across Nigeria, my journey began with an insatiable hunger to document people in their most genuine, unfiltered light.
+                    </p>
+                    <p>
+                        To me, a photoshoot isn't about stiff poses or awkward countdowns. It's an intimate, fun collaboration where you are encouraged to laugh, move, breathe, and celebrate who you truly are. Whether it's the electric roar of a live concert, the quiet tears of a wedding vow, or the vibrant confidence of a milestone birthday — I capture the soul behind the smile.
+                    </p>
+                    <p>
+                        When I'm not behind the camera, you'll find me exploring new landscapes, studying classic cinema lighting, and dreaming up fresh creative perspectives for our next shoot.
+                    </p>
+                    <div style="margin-top: 30px;">
+                        <a href="Portfolio.html" class="btn-primary">Explore My Work &rarr;</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="story">
-                <h1>STORIES THROUGH MY SHOT</h1>
-                <h2>Photography is more than just pictures to me - it's <br> about sories, capturing emotions, and freezing <br> moments that last forever.</h2>
-                <h2>i focus on natural light, real moments, and <br> authentic connections.</h2>
-
-                <div class="logo">
-                    <div class="logo1">
-                    <div class="logo2">
-                        <i class="fi fi-rr-calendar-day"></i>
-                        <h1 class="logo3">5+</h1>
-                    </div>
-                    
-                    <div>
-                        <h2 class="logo4">YEARS EXPERIENCE</h2>
-                    </div>
+            <!-- Stats Row -->
+            <div class="about-stats-container">
+                <div class="about-stat-box">
+                    <div class="stat-icon">&#128197;</div>
+                    <div class="stat-number">5+</div>
+                    <div class="stat-title">Years Behind Lens</div>
                 </div>
 
-                <div class="logo1">
-                    <div class="logo2">
-                        <i class="fi fi-ts-calendar-check"></i>
-                        <h1 class="logo3">200+</h1>
-                    </div>
-
-                    <div>
-                        <h2 class="logo5">PROJECTS</h2>
-                    </div>
+                <div class="about-stat-box">
+                    <div class="stat-icon">&#128248;</div>
+                    <div class="stat-number">200+</div>
+                    <div class="stat-title">Successful Shoots</div>
                 </div>
 
-                <div class="logo1">
-                    <div class="logo2">
-                        <i class="fi fi-rr-heart"></i>
-                        <h1 class="logo3">100+</h1>
-                    </div>
-
-                    <div>
-                        <h2 class="logo5">HAPPY CLIENTS</h2>
-                    </div>
+                <div class="about-stat-box">
+                    <div class="stat-icon">&#128150;</div>
+                    <div class="stat-number">100+</div>
+                    <div class="stat-title">Delighted Clients</div>
                 </div>
+
+                <div class="about-stat-box">
+                    <div class="stat-icon">&#11088;</div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-title">Authentic Connections</div>
                 </div>
             </div>
         </section>
+
+        <!-- Philosophy Pillars -->
+        <section class="section-padding" style="background: rgba(10, 15, 36, 0.4); border-top: 1px solid var(--border-glass);">
+            <div class="section-header">
+                <span class="section-eyebrow">Our Core Principles</span>
+                <h2 class="section-title">The Four Pillars Of My Craft</h2>
+                <hr class="section-divider">
+                <p class="section-subtitle">
+                    Every shoot is anchored on four unwavering commitments to artistic quality.
+                </p>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-number">01</div>
+                    <h3>Natural & Ambient Lighting</h3>
+                    <p>Mastery over available sunlight and subtle off-camera lighting that flatters every skin tone and preserves cinematic realism.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">02</div>
+                    <h3>Effortless Posing Direction</h3>
+                    <p>Never feel awkward again. I provide continuous, gentle guidance so your body language looks relaxed, confident, and editorial.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">03</div>
+                    <h3>Meticulous Color Grading</h3>
+                    <p>Every frame is individually color balanced, enhancing rich skin tones, warm golden hues, and timeless contrast.</p>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="pillar-number">04</div>
+                    <h3>Private Cloud Delivery</h3>
+                    <p>Full-resolution, print-ready files delivered seamlessly to your phone or computer through a secure private gallery link.</p>
+                </div>
+            </div>
+
+            <!-- Quote Banner -->
+            <div class="quote-banner">
+                <blockquote>
+                    "When I'm behind the viewfinder, my goal isn't just to make you look good — it's to remind you of the magic and emotion you felt in that exact second."
+                </blockquote>
+                <div class="quote-author">— Faruq, Founder & Lead Photographer</div>
+                <div style="margin-top: 25px;">
+                    <a href="https://wa.me/2349061345825?text=Hello%20Faruq,%20I%20love%20your%20story%20and%20want%20to%20book%20a%20session!" target="_blank" class="btn-primary">
+                        Let's Create Together &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h3>Bank Shot <span>It</span></h3>
+                    <p>High-end photography capturing stories, preserving raw emotions, and celebrating life's most unforgettable chapters.</p>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/bankshotit_?igsh=Y3FzMGNpejdtZG0x&utm_source=qr" target="_blank" class="social-btn"><i class="fi fi-brands-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@__thatblackboy_shoots?_r=1&_t=ZS-96KGCsGJq6e" target="_blank" class="social-btn"><i class="fi fi-brands-tik-tok"></i></a>
+                        <a href="https://wa.me/2349061345825" target="_blank" class="social-btn"><i class="fi fi-rr-phone-call"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Galleries</h4>
+                    <ul class="footer-links">
+                        <li><a href="Birthday.html">Birthday Shoots</a></li>
+                        <li><a href="Wedding.html">Wedding Ceremonies</a></li>
+                        <li><a href="Concert.html">Concerts & Events</a></li>
+                        <li><a href="Portfolio.html">Lifestyle & Fashion</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Faruq</a></li>
+                        <li><a href="services.html">Packages & Pricing</a></li>
+                        <li><a href="contact.html">Contact & Location</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Studio Location</h4>
+                    <p style="margin-bottom: 8px; font-size: 13px;">Ogun State, Nigeria</p>
+                    <p style="margin-bottom: 8px; font-size: 13px;">Available worldwide for destination bookings.</p>
+                    <p style="font-size: 13px; color: var(--gold);">&#9742; +234 906 134 5825</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Bank Shot It (ShotByBankyCreativesConcept). All Rights Reserved.</div>
+                <div>Crafted for timeless visual excellence.</div>
+            </div>
+        </footer>
     </main>
 
-    <footer>
-        <h2>When i'm not behind the camera, you'll find me exploring <br><br> new places, chasing light, and getting inspire by everyday life.</h2>
-    </footer>
-    
+    <!-- Mobile Nav Toggle Script -->
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const drawerClose = document.getElementById('drawer-close');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+
+        if (navToggle && mobileDrawer) {
+            navToggle.addEventListener('click', () => mobileDrawer.classList.add('active'));
+            drawerClose.addEventListener('click', () => mobileDrawer.classList.remove('active'));
+            mobileDrawer.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => mobileDrawer.classList.remove('active'));
+            });
+        }
+    </script>
+
+    <script src="gallery-store.js"></script>
+    <script src="gallery-loader.js"></script>
 </body>
 </html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Shot It — Creator Admin Dashboard</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Flaticon / UI Icons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- ======================================================================
+         Top Admin Navigation Bar
+         ====================================================================== -->
+    <nav class="admin-navbar">
+        <div class="brand-wrapper">
+            <span class="brand-badge">Admin Studio</span>
+            <div class="brand-title">Bank Shot <span>It</span></div>
+        </div>
+
+        <div class="nav-actions">
+            <a href="index.html" class="btn-nav btn-nav-outline" target="_blank">
+                <span>&#128065;</span> View Website
+            </a>
+            <button class="btn-nav btn-nav-outline" id="admin-settings-btn" title="Backup & Studio Settings">
+                <span>&#9881;</span> Settings
+            </button>
+            <button class="btn-nav btn-nav-danger" id="admin-logout-btn" title="Lock Dashboard">
+                <span>&#128274;</span> Lock / Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- ======================================================================
+         Main Admin Content
+         ====================================================================== -->
+    <main class="admin-container">
+
+        <!-- Intro Header & Quick Jump Links -->
+        <section class="admin-intro">
+            <div>
+                <h1>Photography Management Studio</h1>
+                <p>Upload new client shoots, assign to specific pages, or remove photos instantly.</p>
+            </div>
+            <div class="quick-page-links">
+                <span style="font-size: 13px; color: var(--text-muted); align-self: center;">Jump to live gallery:</span>
+                <a href="Birthday.html" class="quick-page-link" target="_blank">&#127874; Birthday Page</a>
+                <a href="Wedding.html" class="quick-page-link" target="_blank">&#128141; Wedding Page</a>
+                <a href="Concert.html" class="quick-page-link" target="_blank">&#127928; Concert Page</a>
+                <a href="Portfolio.html" class="quick-page-link" target="_blank">&#127807; Lifestyle Page</a>
+                <a href="index.html#portfolio" class="quick-page-link" target="_blank">&#11088; Home Highlights</a>
+            </div>
+        </section>
+
+        <!-- Metric Counter Cards -->
+        <section class="metrics-grid">
+            <div class="metric-card" data-category="all" title="View all photos">
+                <div class="metric-header">
+                    <span class="metric-icon">&#128248;</span>
+                    <span class="metric-badge">All</span>
+                </div>
+                <div class="metric-number" id="metric-total">0</div>
+                <div class="metric-label">Total Gallery Photos</div>
+            </div>
+
+            <div class="metric-card" data-category="birthday" title="Filter Birthday photos">
+                <div class="metric-header">
+                    <span class="metric-icon">&#127874;</span>
+                    <span class="metric-badge" style="background: rgba(236, 72, 153, 0.2); color: #ec4899;">Birthday</span>
+                </div>
+                <div class="metric-number" id="metric-birthday">0</div>
+                <div class="metric-label">Birthday Shoots</div>
+            </div>
+
+            <div class="metric-card" data-category="wedding" title="Filter Wedding photos">
+                <div class="metric-header">
+                    <span class="metric-icon">&#128141;</span>
+                    <span class="metric-badge" style="background: var(--gold-dim); color: var(--gold);">Wedding</span>
+                </div>
+                <div class="metric-number" id="metric-wedding">0</div>
+                <div class="metric-label">Wedding Shoots</div>
+            </div>
+
+            <div class="metric-card" data-category="concert" title="Filter Concert photos">
+                <div class="metric-header">
+                    <span class="metric-icon">&#127928;</span>
+                    <span class="metric-badge" style="background: rgba(139, 92, 246, 0.2); color: #8b5cf6;">Concert</span>
+                </div>
+                <div class="metric-number" id="metric-concert">0</div>
+                <div class="metric-label">Concert & Events</div>
+            </div>
+
+            <div class="metric-card" data-category="lifestyle" title="Filter Lifestyle photos">
+                <div class="metric-header">
+                    <span class="metric-icon">&#127807;</span>
+                    <span class="metric-badge" style="background: rgba(16, 185, 129, 0.2); color: #10b981;">Lifestyle</span>
+                </div>
+                <div class="metric-number" id="metric-lifestyle">0</div>
+                <div class="metric-label">Lifestyle Shoots</div>
+            </div>
+
+            <div class="metric-card" data-category="home" title="Filter Home photos">
+                <div class="metric-header">
+                    <span class="metric-icon">&#11088;</span>
+                    <span class="metric-badge" style="background: rgba(59, 130, 246, 0.2); color: #3b82f6;">Home</span>
+                </div>
+                <div class="metric-number" id="metric-home">0</div>
+                <div class="metric-label">Home Highlights</div>
+            </div>
+        </section>
+
+        <!-- Two Column Studio Layout -->
+        <div class="dashboard-grid">
+
+            <!-- LEFT COLUMN: ADD NEW IMAGE FORM -->
+            <section class="admin-card" id="add-photo-card">
+                <div class="card-heading">
+                    <h2><span>&#10133;</span> Add New Photo</h2>
+                    <span class="sub">Select Page & Upload</span>
+                </div>
+
+                <!-- 1. Destination Category Selector -->
+                <div class="form-group">
+                    <label class="form-label" for="photo-category-select">
+                        Where should this image go? <span>*</span>
+                    </label>
+                    <select id="photo-category-select" class="form-select">
+                        <option value="birthday" selected>🎂 Birthday Page (Birthday.html)</option>
+                        <option value="wedding">💍 Wedding Page (Wedding.html)</option>
+                        <option value="concert">🎸 Concert Page (Concert.html)</option>
+                        <option value="lifestyle">🌿 Lifestyle Portfolio (Portfolio.html)</option>
+                        <option value="home">⭐ Home Highlights (index.html)</option>
+                    </select>
+
+                    <div class="category-chips">
+                        <div class="category-chip active" data-category="birthday">&#127874; Birthday</div>
+                        <div class="category-chip" data-category="wedding">&#128141; Wedding</div>
+                        <div class="category-chip" data-category="concert">&#127928; Concert</div>
+                        <div class="category-chip" data-category="lifestyle">&#127807; Lifestyle</div>
+                        <div class="category-chip" data-category="home">&#11088; Home</div>
+                    </div>
+                </div>
+
+                <!-- 2. Upload Mode Switcher (File vs Web URL) -->
+                <div class="form-group">
+                    <label class="form-label">Upload Source</label>
+                    <div class="upload-tabs">
+                        <div class="upload-tab active" id="tab-upload-file">&#128193; Upload From Device</div>
+                        <div class="upload-tab" id="tab-upload-url">&#128279; Image Web URL</div>
+                    </div>
+
+                    <!-- Mode A: Dropzone File Upload -->
+                    <div id="upload-mode-file">
+                        <div class="dropzone" id="file-dropzone">
+                            <input type="file" id="file-input" accept="image/*" multiple />
+                            <div class="dropzone-icon">&#128248;</div>
+                            <div class="dropzone-text">Click to browse or drag & drop photos here</div>
+                            <div class="dropzone-sub">Supports JPG, PNG, WebP (auto-optimized for web)</div>
+                        </div>
+                    </div>
+
+                    <!-- Mode B: Direct Image URL -->
+                    <div id="upload-mode-url" style="display: none;">
+                        <input type="url" id="photo-url-input" class="form-input" placeholder="https://example.com/photo.jpg" />
+                        <span style="font-size: 11px; color: var(--text-muted); margin-top: 5px; display: block;">Paste an image link from Cloudinary, Imgur, Google Drive, or anywhere on the web.</span>
+                    </div>
+
+                    <!-- Live Image Preview Box -->
+                    <div class="preview-box" id="preview-box">
+                        <img id="preview-img" src="" alt="Selected Preview" />
+                        <button type="button" class="preview-remove-btn" id="preview-remove" title="Remove">&times;</button>
+                        <div class="preview-info" id="preview-meta">Ready to upload</div>
+                    </div>
+                </div>
+
+                <!-- 3. Photo Title / Caption -->
+                <div class="form-group">
+                    <label class="form-label" for="photo-title-input">Photo Caption / Title (Optional)</label>
+                    <input type="text" id="photo-title-input" class="form-input" placeholder="e.g. Birthday Celebration at Lekki, Lagos" />
+                </div>
+
+                <!-- Action Button -->
+                <button type="button" class="btn-submit-photo" id="btn-submit-photo">
+                    <span>&#128640;</span>
+                    <span id="submit-btn-text">Publish to Birthday Gallery</span>
+                </button>
+            </section>
+
+            <!-- RIGHT COLUMN: MANAGE & REMOVE IMAGES -->
+            <section class="admin-card" id="manage-section">
+                <div class="card-heading">
+                    <h2><span>&#128451;</span> Manage Gallery Photos</h2>
+                    <span class="sub">Filter, Move or Delete</span>
+                </div>
+
+                <!-- Filter & Search Toolbar -->
+                <div class="manage-toolbar">
+                    <div class="category-tabs">
+                        <button class="category-tab-btn active" data-filter="all">
+                            All (<span id="tab-count-all">0</span>)
+                        </button>
+                        <button class="category-tab-btn" data-filter="birthday">
+                            🎂 Birthday (<span id="tab-count-birthday">0</span>)
+                        </button>
+                        <button class="category-tab-btn" data-filter="wedding">
+                            💍 Wedding (<span id="tab-count-wedding">0</span>)
+                        </button>
+                        <button class="category-tab-btn" data-filter="concert">
+                            🎸 Concert (<span id="tab-count-concert">0</span>)
+                        </button>
+                        <button class="category-tab-btn" data-filter="lifestyle">
+                            🌿 Lifestyle (<span id="tab-count-lifestyle">0</span>)
+                        </button>
+                        <button class="category-tab-btn" data-filter="home">
+                            ⭐ Home (<span id="tab-count-home">0</span>)
+                        </button>
+                    </div>
+
+                    <div class="search-box">
+                        <span class="search-icon">&#128269;</span>
+                        <input type="text" id="manage-search-input" placeholder="Search photos by title..." />
+                    </div>
+                </div>
+
+                <!-- Photo Management Grid -->
+                <div class="manage-grid" id="manage-grid">
+                    <!-- Populated dynamically via admin.js -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ======================================================================
+         MODALS & OVERLAYS
+         ====================================================================== -->
+
+    <!-- 1. PIN Security Gate Modal -->
+    <div class="admin-modal-overlay active" id="pin-gate-modal">
+        <div class="admin-modal-card">
+            <div class="modal-icon">&#128272;</div>
+            <h3 class="modal-title">Bank Shot It — Creator Access</h3>
+            <p class="modal-desc">Please enter your studio PIN to access photo management and upload controls.</p>
+            <input type="password" id="pin-input" class="modal-input" maxlength="8" placeholder="••••" autofocus />
+            <div id="pin-error" style="color: var(--danger); font-size: 13px; margin-bottom: 15px; display: none;">
+                &#9888; Incorrect PIN. Default PIN is 1234.
+            </div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 20px;">
+                Default PIN is <strong>1234</strong> (can be changed in settings)
+            </div>
+            <button class="btn-modal btn-modal-confirm" id="pin-submit-btn" style="width: 100%;">
+                Unlock Dashboard
+            </button>
+        </div>
+    </div>
+
+    <!-- 2. Delete Confirmation Modal -->
+    <div class="admin-modal-overlay" id="delete-modal">
+        <div class="admin-modal-card">
+            <div class="modal-icon" style="color: var(--danger);">&#128465;</div>
+            <h3 class="modal-title">Remove Photo?</h3>
+            <p class="modal-desc" id="delete-modal-desc">
+                Are you sure you want to remove this photo from the gallery?
+            </p>
+            <div class="modal-actions">
+                <button class="btn-modal btn-modal-cancel" id="delete-cancel-btn">Cancel</button>
+                <button class="btn-modal btn-modal-danger" id="delete-confirm-btn">Yes, Remove</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. Move Photo Category Modal -->
+    <div class="admin-modal-overlay" id="move-modal">
+        <div class="admin-modal-card">
+            <div class="modal-icon">&#8646;</div>
+            <h3 class="modal-title">Move Photo to Another Page</h3>
+            <p class="modal-desc">Select the new category/page for this photo:</p>
+            <select id="move-category-select" class="form-select" style="margin-bottom: 20px;">
+                <option value="birthday">🎂 Birthday Page (Birthday.html)</option>
+                <option value="wedding">💍 Wedding Page (Wedding.html)</option>
+                <option value="concert">🎸 Concert Page (Concert.html)</option>
+                <option value="lifestyle">🌿 Lifestyle Portfolio (Portfolio.html)</option>
+                <option value="home">⭐ Home Highlights (index.html)</option>
+            </select>
+            <div class="modal-actions">
+                <button class="btn-modal btn-modal-cancel" id="move-cancel-btn">Cancel</button>
+                <button class="btn-modal btn-modal-confirm" id="move-confirm-btn">Update Category</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. Full Preview Modal in Admin -->
+    <div class="admin-modal-overlay" id="admin-preview-modal">
+        <div class="admin-modal-card" style="max-width: 680px; padding: 25px;">
+            <img id="admin-preview-img" src="" alt="Full Preview" style="width: 100%; max-height: 480px; object-fit: contain; border-radius: var(--radius-sm); margin-bottom: 15px;" />
+            <h4 id="admin-preview-title" style="font-size: 18px; margin-bottom: 5px;">Photo Title</h4>
+            <div id="admin-preview-meta" style="color: var(--gold); font-size: 13px; margin-bottom: 20px;">Category</div>
+            <button class="btn-modal btn-modal-cancel" onclick="document.getElementById('admin-preview-modal').classList.remove('active')">
+                Close Preview
+            </button>
+        </div>
+    </div>
+
+    <!-- 5. Settings, Backup & Restore Modal -->
+    <div class="admin-modal-overlay" id="settings-modal">
+        <div class="admin-modal-card" style="max-width: 520px; text-align: left;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h3 class="modal-title" style="margin: 0;">Studio Settings & Backup</h3>
+                <button id="settings-close-btn" style="background:none; border:none; color:white; font-size:24px; cursor:pointer;">&times;</button>
+            </div>
+
+            <!-- Change PIN -->
+            <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid var(--border-glass);">
+                <label class="form-label">Change Admin PIN</label>
+                <div style="display: flex; gap: 10px;">
+                    <input type="password" id="new-pin-input" class="form-input" placeholder="New 4-digit PIN" maxlength="8" />
+                    <button class="btn-modal btn-modal-confirm" id="btn-change-pin" style="flex: 0 0 120px;">Save PIN</button>
+                </div>
+            </div>
+
+            <!-- Export / Import Backup -->
+            <div style="margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid var(--border-glass);">
+                <label class="form-label">Gallery Data Backup & Restore</label>
+                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+                    Download a full backup of all categorized photos or transfer to another device.
+                </p>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-modal btn-modal-confirm" id="btn-export-backup">&#128190; Export Backup</button>
+                    <button class="btn-modal btn-modal-cancel" id="btn-import-trigger">&#128229; Import Backup</button>
+                    <input type="file" id="import-file-input" accept=".json" style="display:none;" />
+                </div>
+            </div>
+
+            <!-- Reset to Defaults -->
+            <div>
+                <label class="form-label" style="color: var(--danger);">Reset Gallery</label>
+                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+                    Restore the original factory sample photoshoot photos for Birthday, Wedding, Concert, Lifestyle and Home.
+                </p>
+                <button class="btn-modal btn-modal-danger" id="btn-reset-defaults">&#9850; Restore Factory Default Photos</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="admin-toast" id="admin-toast">
+        <span class="toast-icon" id="toast-icon">&#10004;</span>
+        <div class="toast-msg">
+            <h5 id="toast-title">Success</h5>
+            <p id="toast-msg">Photo published to gallery.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="gallery-store.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
